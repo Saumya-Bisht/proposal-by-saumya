@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saumya's Proposal💌</title>
+</head>
+<body>
+  <style>
+    body{
+      background-color: pink;
+      background-image: url("assets/watercolor-sugar-cotton-clouds-background_52683-80661.jpg");
+      /* background-repeat: no-repeat; */
+      background-size: cover;
+      font-family: cursive;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: larger;
+      color: rgb(147, 1, 118);
+    }
+    button{
+      /* background-color:red; */
+      border: 1px solid darkmagenta;
+      border-radius: 100px 10px 10px 10px;
+      color: darkmagenta;
+      font-weight: bolder;
+    }
+    .heart {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    /* transform: rotate(-45deg); */
+    background-color: pink;
+  
+  }
+
+  .heart::after {
+    top: 0;
+    left: 50px;
+  }
+  img{
+    height: 35vh;
+    margin-left: 10rem;
+  }
+  @media only screen and (max-width: 600px) {
+    div {
+      max-width: 80%;
+      /* margin-left: 10%;
+      margin-right: 10%; */
+    }
+    img{
+      margin: 10px auto;
+    }
+    button{
+      float: right;
+    }
+  }
+  </style>
+    <audio id="myAudio" loop autoplay><source src="./assets/Music.mpeg#t=00:00:11" type="audio/mp3"></audio>
+    <div class="container">
+        <p>I have something for you!</p>
+        <p>It's a question and you have to answer it.Open envelope to see what I have for you!</p>
+        <img src="./assets/letter.png" alt="Image">
+        <button class="heart" id="redirectButton">Open Envelope</button>
+      </div>
+
+      <script>
+        
+        document.getElementById('redirectButton').addEventListener('click', function() {
+          window.location.href = './proposal.html';
+        });
+        document.getElementById("myAudio");
+            // Set the start time in seconds
+            var startTime = 60; // For example, starting at 30 seconds
+            audio.currentTime = startTime;
+        
+      </script>
+</body>
+</html>

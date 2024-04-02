@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal💌</title>
+</head>
+<body>
+    <style>
+        body{
+          background-color: pink;
+          background-image: url("assets/watercolor-sugar-cotton-clouds-background_52683-80661.jpg");
+          /* background-repeat: no-repeat; */
+          background-size: cover;
+          font-family: cursive;
+      color: rgb(147, 1, 118);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+        }
+        #button{
+      /* background-color:red; */
+      border: 1px solid darkmagenta;
+      border-radius: 100px 10px 10px 10px;
+      color: darkmagenta;
+      font-weight: bolder;
+    }
+    .heart {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    /* transform: rotate(-45deg); */
+    background-color: pink;
+  
+  } 
+  @media only screen and (max-width: 600px) {
+    div {
+      max-width: 100%;
+      /* margin-left: 10%;
+      margin-right: 10%; */
+    }
+    #flower{
+      margin-left: 6rem;
+    }
+    #button{
+      float: right;
+    }
+    #yesButton{
+        height: 20vh;
+    }
+    #noButton{
+        height: 20vh;
+    }
+  }
+  @media only screen and (min-width: 620px) {
+    div {
+      max-width: 100%;
+      /* margin-left: 10%;
+      margin-right: 10%; */
+    }
+    #flower{
+      margin-left: 20rem;
+    }
+    #button{
+      float: right;
+    }
+  }
+      </style>
+    <audio id="myAudio" loop autoplay><source src="./assets/Music.mpeg#t=00:00:32" type="audio/mp3"></audio>
+    <div>
+       <div style="display: flex;">
+        <h1>I WISH TO MEET YOU! WILL YOU FULFIL MY WISH?</h1>
+        <img style="height: 17vh; " src="./assets/in love.png" alt="Image"/>
+       </div> 
+        <img id="flower" src="./assets/flowers.png" alt="flowers">
+        <div style="display: flex; justify-content: space-between; width: 100%;">
+            <button  id="yesButton" onclick="handleyes()"><img onclick="handleyes()" src="./assets/yes.png"  id="yesButton" alt="Image"></button>
+            <button onclick="handleno()" id="noButton" onmouseover="moveButton()"><img onclick="handleno()" id="noButton" onmouseover="moveButton()" src="./assets/no.png" alt="Image"></button>
+        </div>
+    </div>
+    <button id="button" class="heart" onclick="goBack()">Close Envelope ✉ </button>
+
+    <script>
+        function moveButton() {
+            var button = document.getElementById('noButton');
+            var maxX = window.innerWidth - button.offsetWidth;
+            var maxY = window.innerHeight - button.offsetHeight;
+
+            var newX = Math.floor(Math.random() * maxX);
+            var newY = Math.floor(Math.random() * maxY);
+
+            button.style.position = 'absolute';
+            button.style.left = newX + 'px';
+            button.style.top = newY + 'px';
+        }
+        function goBack() {
+            window.history.back();
+        }
+        function handleno(){
+            document.getElementById('noButton').addEventListener('click', function() {
+          window.location.href = './laata.html';
+        });
+        }
+        function handleyes(){
+            document.getElementById('yesButton').addEventListener('click', function() {
+          window.location.href = './muah.html';
+        });
+        }
+    </script>
+</body>
+</html>
