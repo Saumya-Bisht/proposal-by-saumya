@@ -63,13 +63,15 @@ font-weight: bold;
         Kyunki mera dil <span style="color: red;">♥</span> bhut bada h, isilie👉 Here is your another chance of thinking!🤗
        </p>
        <img src="./assets/lov.png" alt="Image">
-       <button class="heart" onclick="goBack()">Think Again🥺</button>
+       <button id="button" class="heart" onclick="goBack()">Think Again🥺</button>
 
     </div>
 
     <script>
         function goBack() {
-            window.history.back();
+          document.getElementById('button').addEventListener('click', function() {
+          window.location.href = './proposal.html';
+        });
         }
     </script>
 </body>

@@ -99,7 +99,9 @@ align-items: center;
             button.style.top = newY + 'px';
         }
         function goBack() {
-            window.history.back();
+          document.getElementById('button').addEventListener('click', function() {
+          window.location.href = './proposalBySaumya.html';
+        });
         }
         function handleno(){
             document.getElementById('noButton').addEventListener('click', function() {
